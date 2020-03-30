@@ -6,8 +6,8 @@ subtitle:
 
 ## Danmin [Jeongmin Lee]
 - Kyunghee Univ. Computer Engineering
-- Jr. **Android,  NODEJS** Developer
-- Working in [LIKELION](https://likelion.net/) 8th Staff
+- Jr. **Android,  NodeJS** Developer
+- Working in [LIKE LION](https://likelion.net/) 8th Staff
 
 ## Links
 - Email : danmin20@khu.ac.kr
@@ -16,11 +16,11 @@ subtitle:
 ## Technical Skills
 - **Program Language** :: JavaScript, TypeScript, Kotiln, Python, Java, C++, C, HTML, CSS
 - **Development Tool** :: Visual Studio, Visual Code, Atom, Eclipse, Android Studio, Pycharm
-- **Others** :: Oracle, Prisma, GraphQl, Firebase, Git, Slack, Notion, etc...
+- **Others** :: Oracle, Prisma, React, GraphQL, Firebase, Git, Slack, Notion, etc...
 
 ## Android Skills  
 
-- **Dev. Language** :: Java, Kotin
+- **Dev. Language** :: Java, Kotlin
 - **Dev. Architecture** :: MVC
 
 ## Node JS  
