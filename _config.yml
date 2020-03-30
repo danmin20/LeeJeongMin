@@ -65,7 +65,7 @@ author:
 # You can reorder the items to define the link order.
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
-  rss: true
+#  rss: true
   email: "danmin20@khu.ac.kr"
   github: danmin20
 #  reddit: yourname
@@ -73,7 +73,7 @@ social-network-links:
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
-#  instagram: deanat78
+  instagram: jm__110j8
 #  youtube: user/deanat78
 #  spotify: yourname
 #  telephone: +14159998888
