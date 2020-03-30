@@ -12,6 +12,7 @@ subtitle:
 ## Links
 - Email : danmin20@khu.ac.kr
 - [Github](https://github.com/danmin20)
+- [Tistory](https://danminblog.tistory.com/)
 
 ## Technical Skills
 - **Program Language** :: JavaScript, TypeScript, Kotiln, Python, Java, C++, C, HTML, CSS
@@ -41,7 +42,6 @@ subtitle:
 -------
 
 ## Etc
-- [Tistory Blog](https://danminblog.tistory.com/)
 - [마이북 안드로이드 앱](https://play.google.com/store/apps/details?id=com.danmin.mybook) :: (2020.02)
 
 
