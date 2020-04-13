@@ -18,7 +18,7 @@ subtitle:
 ## Technical Skills
 - **Program Language** :: JavaScript, TypeScript, Kotiln, Python, Java, C++, C, HTML, CSS
 - **Development Tool** :: Visual Studio, Visual Code, Atom, Eclipse, Android Studio, Pycharm
-- **Others** :: Oracle, Prisma, Spring, React, GraphQL, Firebase, Git, Slack, Notion, etc...
+- **Others** :: Oracle, Prisma, Spring, React, Django, GraphQL, Firebase, Git, Slack, Notion, etc...
 
 ## Android Skills  
 
@@ -27,8 +27,8 @@ subtitle:
 
 ## Web Skills
 
-- **Dev. Language** :: JavaScript, TypeScript, Java
-- **Dev. Architecture** :: ES6, MVC
+- **Dev. Language** :: JavaScript, TypeScript, Java, Python
+- **Dev. Architecture** :: ES6, MVC, MVT
 
 
 -------
