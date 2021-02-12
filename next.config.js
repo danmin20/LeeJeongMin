@@ -2,6 +2,7 @@
 const config = require("config");
 
 module.exports = {
+  target: "serverless",
   webpack(conf) {
     conf.module.rules.push({
       test: /\.svg$/,
