@@ -8,15 +8,15 @@ const CareerBox = () => {
       <div>
         <span className="__title">Careers.</span>
       </div>
-      {careers.map((career) => (
-        <div key={career.id}>
+      {careers.map((career, idx) => (
+        <div key={idx}>
           <div className="__place">
             {career.name}
             <span className="__date">{career.date}</span>
           </div>
           <div className="__part">{career.part}</div>
-          {career.works.map((work) => (
-            <div key={work.id} className="__work">
+          {career.works.map((work, idx) => (
+            <div key={idx} className="__work">
               <div className="__work__title">
                 {work.title}
                 <span className="__work__person">{work.person}</span>
@@ -43,12 +43,12 @@ const CareerBox = () => {
 
 const Box = styled.div`
   padding: 3rem;
-  ${media.mobile} {
-    padding: 3rem 1.5rem;
-  }
   color: white;
   display: flex;
   flex-direction: column;
+  ${media.mobile} {
+    padding: 3rem 1.5rem;
+  }
 
   .__title {
     font-size: 3rem;
@@ -121,6 +121,7 @@ const Box = styled.div`
     }
     &__thing {
       font-weight: 300;
+      line-height: 150%;
       margin: 1rem 0;
       ${media.mobile} {
         font-size: 0.3rem;
