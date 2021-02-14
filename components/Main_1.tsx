@@ -107,8 +107,12 @@ const Container = styled.div`
 const ImgSlide = styled.div`
   position: absolute;
   margin-right: 10rem;
-  right: -5rem;
+  right: 10rem;
   bottom: 10rem;
+  ${media.laptop} {
+    right: -5rem;
+    bottom: 10rem;
+  }
   ${media.tablet} {
     right: -10rem;
     bottom: 15rem;

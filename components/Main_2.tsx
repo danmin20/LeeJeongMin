@@ -39,7 +39,9 @@ const Main_2 = () => {
         }}
       >
         <Route onClick={() => router.push("/about")}>ABOUT</Route>
-        <Route>BLOG</Route>
+        <Route onClick={() => window.open("https://velog.io/@danmin20")}>
+          BLOG
+        </Route>
         <Route onClick={() => window.open("https://github.com/danmin20")}>
           GITHUB
         </Route>
@@ -97,12 +99,12 @@ const Container = styled.div`
     position: relative;
     background-color: white;
     height: 0.3rem;
-    width: 44rem;
+    width: 60%;
     ${media.tablet} {
-      width: 40rem;
+      width: 80%;
     }
     ${media.mobile} {
-      width: 20rem;
+      width: 90%;
     }
   }
 `;
@@ -115,7 +117,7 @@ const SlideContainer = styled.div`
 const Slide = styled.div`
   font-size: 4.5rem;
   font-weight: 700;
-  padding-left: 17rem;
+  padding-left: 4%;
   width: 100%;
   .__text {
     background: ${({ theme }) => theme.color.gradient};
@@ -124,12 +126,12 @@ const Slide = styled.div`
     -webkit-text-fill-color: transparent;
   }
   ${media.tablet} {
-    font-size: 4rem;
-    padding-left: 4.1rem;
+    font-size: 3rem;
+    padding-left: 2%;
   }
   ${media.mobile} {
     font-size: 2rem;
-    padding-left: 1.2rem;
+    padding-left: 1%;
   }
 `;
 
@@ -144,12 +146,13 @@ const TextBox = styled.div`
   line-height: 230%;
   margin-top: 3rem;
   text-align: end;
+  width: 60%;
   ${media.tablet} {
-    width: 40rem;
+    width: 80%;
     font-size: 0.9rem;
   }
   ${media.mobile} {
-    width: 22rem;
+    width: 90%;
     font-size: 0.1rem;
   }
 `;
