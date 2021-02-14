@@ -11,7 +11,7 @@ const SkillBox = () => {
 };
 
 const Box = styled.div`
-  margin: 3rem;
+  padding: 3rem;
   color: white;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@ const Box = styled.div`
   .__title {
     font-size: 3rem;
     font-weight: 600;
-    background: linear-gradient(128.93deg, #00ff94 22.41%, #0038ff 93.45%);
+    background: ${({ theme }) => theme.color.gradient};
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

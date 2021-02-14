@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { careers } from "../public/data";
+import { media } from "../styles/theme";
 
 const CareerBox = () => {
   return (
@@ -20,7 +21,7 @@ const CareerBox = () => {
                 {work.title}
                 <span className="__work__person">{work.person}</span>
               </div>
-              <div style={{ display: "flex" }}>
+              <div style={{ display: "flex", overflowX: "scroll" }}>
                 {work.stacks.map((stack: String, idx) => (
                   <div key={idx} className="__work__stack">
                     {stack}
@@ -41,7 +42,10 @@ const CareerBox = () => {
 };
 
 const Box = styled.div`
-  margin: 3rem;
+  padding: 3rem;
+  ${media.mobile} {
+    padding: 3rem 1.5rem;
+  }
   color: white;
   display: flex;
   flex-direction: column;
@@ -49,25 +53,38 @@ const Box = styled.div`
   .__title {
     font-size: 3rem;
     font-weight: 600;
-    background: linear-gradient(128.93deg, #00ff94 22.41%, #0038ff 93.45%);
+    background: ${({ theme }) => theme.color.gradient};
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    ${media.mobile} {
+      font-size: 2rem;
+    }
   }
   .__place {
     margin-top: 3rem;
     font-size: 2rem;
     font-weight: 600;
+    ${media.mobile} {
+      font-size: 1rem;
+    }
   }
   .__part {
     padding: 1rem 0;
     border-bottom: 1px solid white;
     margin-bottom: 1rem;
     font-weight: 300;
+    ${media.mobile} {
+      font-size: 0.1rem;
+    }
   }
   .__date {
     font-size: 1rem;
     margin-left: 1rem;
+    ${media.mobile} {
+      font-size: 0.3rem;
+      margin-left: 0.3rem;
+    }
   }
   .__work {
     width: 100%;
@@ -77,11 +94,18 @@ const Box = styled.div`
     &__title {
       font-weight: 600;
       margin-bottom: 1rem;
+      ${media.mobile} {
+        font-size: 0.7rem;
+      }
     }
     &__person {
       font-weight: 300;
       font-size: 0.8rem;
       margin-left: 0.5rem;
+      ${media.mobile} {
+        font-size: 0.5rem;
+        margin-left: 0.2rem;
+      }
     }
     &__stack {
       border-radius: 0.2rem;
@@ -90,10 +114,17 @@ const Box = styled.div`
       margin-right: 0.5rem;
       padding: 0.1rem 0.5rem;
       font-size: 0.8rem;
+      white-space: nowrap;
+      ${media.mobile} {
+        font-size: 0.3rem;
+      }
     }
     &__thing {
       font-weight: 300;
       margin: 1rem 0;
+      ${media.mobile} {
+        font-size: 0.3rem;
+      }
     }
   }
 `;

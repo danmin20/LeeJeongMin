@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import styled from "styled-components";
+import { media } from "../styles/theme";
 
 const Main_2 = () => {
   const router = useRouter();
@@ -7,14 +8,7 @@ const Main_2 = () => {
   return (
     <Container>
       <TextSlider />
-      <div
-        style={{
-          position: "relative",
-          background: "white",
-          height: "0.3rem",
-          width: "44rem",
-        }}
-      >
+      <div className="__progress">
         <ProgressBar />
       </div>
       <TextBox>
@@ -55,16 +49,16 @@ const Main_2 = () => {
 };
 
 const TextSlider = () => (
-  <div style={{ width: "78rem" }}>
+  <SlideContainer>
     <div
       style={{
-        width: "70rem",
+        width: "100%",
         overflow: "hidden",
       }}
     >
       <div
         style={{
-          width: "350rem",
+          width: "500%",
           overflow: "hidden",
           display: "flex",
           animation: "slide 20s infinite",
@@ -87,36 +81,61 @@ const TextSlider = () => (
         </Slide>
       </div>
     </div>
-  </div>
+  </SlideContainer>
 );
 
 const Container = styled.div`
   width: 100%;
   height: 100vh;
+  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Montserrat", sans-serif;
+  .__progress {
+    position: relative;
+    background-color: white;
+    height: 0.3rem;
+    width: 44rem;
+    ${media.tablet} {
+      width: 40rem;
+    }
+    ${media.mobile} {
+      width: 20rem;
+    }
+  }
+`;
+
+const SlideContainer = styled.div`
+  width: 100%;
+  margin-top: -5rem;
 `;
 
 const Slide = styled.div`
-  width: 70rem;
   font-size: 4.5rem;
   font-weight: 700;
   padding-left: 17rem;
+  width: 100%;
   .__text {
-    background: linear-gradient(128.93deg, #00ff94 22.41%, #0038ff 93.45%);
+    background: ${({ theme }) => theme.color.gradient};
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  ${media.tablet} {
+    font-size: 4rem;
+    padding-left: 4.1rem;
+  }
+  ${media.mobile} {
+    font-size: 2rem;
+    padding-left: 1.2rem;
   }
 `;
 
 const ProgressBar = styled.div`
   height: 0.3rem;
-  background: linear-gradient(128.93deg, #00ff94 22.41%, #0038ff 93.45%);
+  background: ${({ theme }) => theme.color.gradient};
   position: absolute;
   animation: progress 4s infinite;
 `;
@@ -125,12 +144,27 @@ const TextBox = styled.div`
   line-height: 230%;
   margin-top: 3rem;
   text-align: end;
+  ${media.tablet} {
+    width: 40rem;
+    font-size: 0.9rem;
+  }
+  ${media.mobile} {
+    width: 22rem;
+    font-size: 0.1rem;
+  }
 `;
 
 const Bold = styled.span`
   font-weight: 700;
   font-size: 1.5rem;
   margin-left: 0.3rem;
+  ${media.tablet} {
+    font-size: 1.2rem;
+  }
+  ${media.mobile} {
+    margin-left: 0.1rem;
+    font-size: 0.7rem;
+  }
 `;
 
 const Route = styled.div`
@@ -139,10 +173,15 @@ const Route = styled.div`
   font-size: 2rem;
   margin: 3rem;
   &:hover {
-    background: linear-gradient(128.93deg, #00ff94 22.41%, #0038ff 93.45%);
+    background: ${({ theme }) => theme.color.gradient};
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  ${media.mobile} {
+    font-size: 1rem;
+    margin: 1rem;
+    margin-bottom: 3rem;
   }
 `;
 

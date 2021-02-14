@@ -21,7 +21,6 @@ const Container = styled.div`
   width: 100%;
   position: relative;
   height: auto;
-  font-family: "Montserrat", sans-serif;
 `;
 
 export default About;
