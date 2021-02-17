@@ -1,55 +1,40 @@
 import styled from "styled-components";
-import { careers } from "../public/data";
 import { media } from "../styles/theme";
 
-const CareerBox = () => {
+const CareerBox = ({ career }) => {
   return (
-    <Box>
-      <div>
-        <span className="__title">Careers.</span>
+    <Container>
+      <div className="__place">
+        {career.name}
+        <span className="__date">{career.date}</span>
       </div>
-      {careers.map((career, idx) => (
-        <div key={idx}>
-          <div className="__place">
-            {career.name}
-            <span className="__date">{career.date}</span>
-          </div>
-          <div className="__part">{career.part}</div>
-          {career.works.map((work, idx) => (
-            <div key={idx} className="__work">
-              <div className="__work__title">
-                {work.title}
-                <span className="__work__person">{work.person}</span>
-              </div>
-              <div style={{ display: "flex", overflowX: "scroll" }}>
-                {work.stacks.map((stack: String, idx) => (
-                  <div key={idx} className="__work__stack">
-                    {stack}
-                  </div>
-                ))}
-              </div>
-              <div className="__work__thing">
-                {work.things.map((thing: String, idx) => (
-                  <div key={idx}>- {thing}</div>
-                ))}
-              </div>
+      <div className="__part">{career.part}</div>
+      {career.works &&
+        career.works.map((work, idx) => (
+          <div key={idx} className="__work">
+            <div className="__work__title">
+              {work.title}
+              <span className="__work__person">{work.person}</span>
             </div>
-          ))}
-        </div>
-      ))}
-    </Box>
+            <div style={{ display: "flex", overflowX: "scroll" }}>
+              {work.stacks.map((stack: String, idx) => (
+                <div key={idx} className="__work__stack">
+                  {stack}
+                </div>
+              ))}
+            </div>
+            <div className="__work__thing">
+              {work.things.map((thing: String, idx) => (
+                <div key={idx}>- {thing}</div>
+              ))}
+            </div>
+          </div>
+        ))}
+    </Container>
   );
 };
 
-const Box = styled.div`
-  padding: 3rem;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  ${media.mobile} {
-    padding: 3rem 1.5rem;
-  }
-
+const Container = styled.div`
   .__title {
     font-size: 3rem;
     font-weight: 600;

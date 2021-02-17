@@ -2,37 +2,24 @@ import styled from "styled-components";
 import { activities } from "../public/data";
 import { media } from "../styles/theme";
 
-const ActivityBox = () => {
+const ActivityBox = ({ activity }) => {
   return (
-    <Box>
-      <div>
-        <span className="__title">Activities.</span>
+    <Container>
+      <div style={{ position: "relative", marginTop: "1rem" }}>
+        <Card>
+          <div className="__name">
+            {activity.title}
+            <span className="__date">{activity.date}</span>
+          </div>
+          <div className="__about">{activity.about}</div>
+        </Card>
+        <CardBg />
       </div>
-      {activities.map((activity, idx) => (
-        <div style={{ position: "relative", marginTop: "1rem" }}>
-          <Card key={idx}>
-            <div className="__name">
-              {activity.title}
-              <span className="__date">{activity.date}</span>
-            </div>
-            <div className="__about">{activity.about}</div>
-          </Card>
-          <CardBg />
-        </div>
-      ))}
-    </Box>
+    </Container>
   );
 };
 
-const Box = styled.div`
-  padding: 3rem;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  ${media.mobile} {
-    padding: 3rem 1.5rem;
-  }
-
+const Container = styled.div`
   .__title {
     font-size: 3rem;
     font-weight: 600;

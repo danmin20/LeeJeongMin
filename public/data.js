@@ -1,5 +1,11 @@
 export const careers = [
   {
+    name: "Naver",
+    date: "2021.03 ~ 2021.04",
+    part: "예약플랫폼 프론트엔드 개발 인턴 (채용연계형)",
+    works: [],
+  },
+  {
     name: "Megazone Cloud",
     date: "2020.11 ~ 2021.02",
     part: "Commercial Technology Center / CloudOne 프론트엔드 개발 인턴",
