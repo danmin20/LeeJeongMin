@@ -1,49 +1,49 @@
-import styled from "styled-components";
-import ActivityBox from "../components/ActivityBox";
-import Background from "../components/Background";
-import CareerBox from "../components/CareerBox";
-import SkillBox from "../components/SkillBox";
-import { activities, careers, skills } from "../public/data";
-import { media } from "../styles/theme";
+import styled from 'styled-components';
+import ActivityBox from '../components/ActivityBox';
+import Background from '../components/Background';
+import CareerBox from '../components/CareerBox';
+import SkillBox from '../components/SkillBox';
+import Up from '../public/up.svg';
+import { activities, careers, skills } from '../public/data';
+import { media } from '../styles/theme';
 
-const About = () => {
-  return (
-    <>
-      <Background />
-      <Container>
-        {/* careers */}
-        <div className="box">
-          <div>
-            <span className="box__title">Careers.</span>
-          </div>
-          {careers.map((career, idx) => (
-            <CareerBox key={idx} career={career} />
-          ))}
+const About = () => (
+  <>
+    <Background />
+    <Container>
+      {/* careers */}
+      <div className="box">
+        <div>
+          <span className="box__title">Careers.</span>
         </div>
+        {careers.map((career, idx) => (
+          <CareerBox key={idx.toString()} career={career} />
+        ))}
+      </div>
 
-        {/* skills */}
-        <div className="box">
-          <div>
-            <span className="box__title">Skills.</span>
-          </div>
-          {skills.map((skill, idx) => (
-            <SkillBox key={idx} skill={skill} />
-          ))}
+      {/* skills */}
+      <div className="box">
+        <div>
+          <span className="box__title">Skills.</span>
         </div>
+        {skills.map((skill, idx) => (
+          <SkillBox key={idx.toString()} skill={skill} />
+        ))}
+      </div>
 
-        {/* activities */}
-        <div className="box">
-          <div>
-            <span className="box__title">Activities.</span>
-          </div>
-          {activities.map((activity, idx) => (
-            <ActivityBox key={idx} activity={activity} />
-          ))}
+      {/* activities */}
+      <div className="box">
+        <div>
+          <span className="box__title">Activities.</span>
         </div>
-      </Container>
-    </>
-  );
-};
+        {activities.map((activity, idx) => (
+          <ActivityBox key={idx.toString()} activity={activity} />
+        ))}
+      </div>
+    </Container>
+    <Up />
+  </>
+);
 
 const Container = styled.div`
   width: 100%;

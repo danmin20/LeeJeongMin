@@ -1,45 +1,41 @@
-import ReactFullpage from "@fullpage/react-fullpage";
-import ImgSlider from "../components/ImgSlider";
-import styled from "styled-components";
-import { media } from "../styles/theme";
-import TextSlider from "../components/TextSlider";
-import { useRouter } from "next/router";
-import ProgressBar from "../components/ProgressBar";
+import ReactFullpage from '@fullpage/react-fullpage';
+import styled from 'styled-components';
+import { useRouter } from 'next/router';
+import ImgSlider from '../components/ImgSlider';
+import { media } from '../styles/theme';
+import TextSlider from '../components/TextSlider';
+import ProgressBar from '../components/ProgressBar';
 
 const Index = () => (
   <ReactFullpage
-    licenseKey={"YOUR_KEY_HERE"}
+    licenseKey="YOUR_KEY_HERE"
     scrollingSpeed={1000}
-    render={() => {
-      return (
-        <ReactFullpage.Wrapper>
-          <div className="section">
-            <Main_1 />
-          </div>
-          <div className="section">
-            <Main_2 />
-          </div>
-        </ReactFullpage.Wrapper>
-      );
-    }}
+    render={() => (
+      <ReactFullpage.Wrapper>
+        <div className="section">
+          <Main1 />
+        </div>
+        <div className="section">
+          <Main2 />
+        </div>
+      </ReactFullpage.Wrapper>
+    )}
   />
 );
 
-const Main_1 = () => {
-  return (
-    <Main1Container>
-      <ImgSlider />
-      <div className="text">
-        <div className="text__name">LEE</div>
-        <div className="text__name">JEONG</div>
-        <div className="text__name">MIN</div>
-        <div className="text__fe">FE Developer</div>
-      </div>
-    </Main1Container>
-  );
-};
+const Main1 = () => (
+  <Main1Container>
+    <ImgSlider />
+    <div className="text">
+      <div className="text__name">LEE</div>
+      <div className="text__name">JEONG</div>
+      <div className="text__name">MIN</div>
+      <div className="text__fe">FE Developer</div>
+    </div>
+  </Main1Container>
+);
 
-const Main_2 = () => {
+const Main2 = () => {
   const router = useRouter();
 
   return (
@@ -48,7 +44,7 @@ const Main_2 = () => {
       <ProgressBar />
       <TextBox>
         <div>
-          <Bold>Frontend</Bold>를 깊이 있게 다져나가고자 하는{" "}
+          <Bold>Frontend</Bold>를 깊이 있게 다져나가고자 하는{' '}
           <Bold>주니어 개발자</Bold>입니다.
         </div>
         <div>
@@ -58,7 +54,7 @@ const Main_2 = () => {
         <Bold>우물 안 개구리가 되지 말자, 내가 아는 것이 전부가 아니다.</Bold>
         <div>항상 되새기고 또 되새기는 문장입니다.</div>
         <div>
-          그렇게 다양한 대외활동과 협업경험을 쌓았으며, 매번{" "}
+          그렇게 다양한 대외활동과 협업경험을 쌓았으며, 매번{' '}
           <Bold>새로운 계획과 도전</Bold>은 큰 자극제가 되어 주었습니다.
         </div>
         <div>
@@ -67,11 +63,30 @@ const Main_2 = () => {
         </div>
       </TextBox>
       <div className="routes">
-        <div className="routes__route" role="button" onClick={() => router.push("/about")}>ABOUT</div>
-        <div className="routes__route" role="button" onClick={() => window.open("https://velog.io/@danmin20")}>
+        <div
+          className="routes__route"
+          role="button"
+          onClick={() => router.push('/about')}
+          onKeyPress={() => router.push('/about')}
+          tabIndex={0}
+        >ABOUT
+        </div>
+        <div
+          className="routes__route"
+          role="button"
+          onClick={() => window.open('https://velog.io/@danmin20')}
+          onKeyPress={() => window.open('https://velog.io/@danmin20')}
+          tabIndex={0}
+        >
           BLOG
         </div>
-        <div className="routes__route" role="button" onClick={() => window.open("https://github.com/danmin20")}>
+        <div
+          className="routes__route"
+          role="button"
+          onClick={() => window.open('https://github.com/danmin20')}
+          onKeyPress={() => window.open('https://github.com/danmin20')}
+          tabIndex={0}
+        >
           GITHUB
         </div>
       </div>

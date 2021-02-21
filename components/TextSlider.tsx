@@ -1,20 +1,20 @@
-import styled from "styled-components";
-import { media } from "../styles/theme";
+import styled from 'styled-components';
+import { media } from '../styles/theme';
 
 const TextSlider = () => (
   <SlideContainer>
     <div
       style={{
-        width: "100%",
-        overflow: "hidden",
+        width: '100%',
+        overflow: 'hidden',
       }}
     >
       <div
         style={{
-          width: "500%",
-          overflow: "hidden",
-          display: "flex",
-          animation: "slide 20s infinite",
+          width: '500%',
+          overflow: 'hidden',
+          display: 'flex',
+          animation: 'slide 20s infinite',
         }}
       >
         <Slide>

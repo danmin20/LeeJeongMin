@@ -1,23 +1,20 @@
-import styled from "styled-components";
-import { activities } from "../public/data";
-import { media } from "../styles/theme";
+import styled from 'styled-components';
+import { media } from '../styles/theme';
 
-const ActivityBox = ({ activity }) => {
-  return (
-    <Container>
-      <div style={{ position: "relative", marginTop: "1rem" }}>
-        <Card>
-          <div className="__name">
-            {activity.title}
-            <span className="__date">{activity.date}</span>
-          </div>
-          <div className="__about">{activity.about}</div>
-        </Card>
-        <CardBg />
-      </div>
-    </Container>
-  );
-};
+const ActivityBox = ({ activity }) => (
+  <Container>
+    <div style={{ position: 'relative', marginTop: '1rem' }}>
+      <Card>
+        <div className="__name">
+          {activity.title}
+          <span className="__date">{activity.date}</span>
+        </div>
+        <div className="__about">{activity.about}</div>
+      </Card>
+      <CardBg />
+    </div>
+  </Container>
+);
 
 const Container = styled.div`
   .__title {

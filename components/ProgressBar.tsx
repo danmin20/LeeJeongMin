@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { media } from "../styles/theme";
+import styled from 'styled-components';
+import { media } from '../styles/theme';
 
 const ProgressBar = () => (
   <Container>
@@ -18,7 +18,7 @@ const Container = styled.div`
   ${media.mobile} {
     width: 90%;
   }
-`
+`;
 
 const Progress = styled.div`
   height: 0.3rem;

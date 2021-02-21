@@ -1,20 +1,18 @@
-import styled from "styled-components";
-import { media } from "../styles/theme";
+import styled from 'styled-components';
+import { media } from '../styles/theme';
 
-const SkillBox = ({ skill }) => {
-  return (
-    <Container>
-      <div className="name">{skill.name}</div>
-      <div className="contents">
-        {skill.contents.map((content: string, idx: number) => (
-          <div key={idx} className="contents__content">
-            - {content}
-          </div>
-        ))}
-      </div>
-    </Container>
-  );
-};
+const SkillBox = ({ skill }) => (
+  <Container>
+    <div className="name">{skill.name}</div>
+    <div className="contents">
+      {skill.contents.map((content: string, idx: number) => (
+        <div key={idx.toString()} className="contents__content">
+          - {content}
+        </div>
+      ))}
+    </div>
+  </Container>
+);
 
 const Container = styled.div`
   .name {

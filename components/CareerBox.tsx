@@ -1,38 +1,36 @@
-import styled from "styled-components";
-import { media } from "../styles/theme";
+import styled from 'styled-components';
+import { media } from '../styles/theme';
 
-const CareerBox = ({ career }) => {
-  return (
-    <Container>
-      <div className="__place">
-        {career.name}
-        <span className="__date">{career.date}</span>
-      </div>
-      <div className="__part">{career.part}</div>
-      {career.works &&
-        career.works.map((work, idx) => (
-          <div key={idx} className="__work">
+const CareerBox = ({ career }) => (
+  <Container>
+    <div className="__place">
+      {career.name}
+      <span className="__date">{career.date}</span>
+    </div>
+    <div className="__part">{career.part}</div>
+    {career.works
+        && career.works.map((work, idx: number) => (
+          <div key={idx.toString()} className="__work">
             <div className="__work__title">
               {work.title}
               <span className="__work__person">{work.person}</span>
             </div>
-            <div style={{ display: "flex", overflowX: "scroll" }}>
-              {work.stacks.map((stack: String, idx) => (
-                <div key={idx} className="__work__stack">
+            <div style={{ display: 'flex', overflowX: 'scroll' }}>
+              {work.stacks.map((stack: string, index: number) => (
+                <div key={index.toString()} className="__work__stack">
                   {stack}
                 </div>
               ))}
             </div>
             <div className="__work__thing">
-              {work.things.map((thing: String, idx) => (
-                <div key={idx}>- {thing}</div>
+              {work.things.map((thing: string, index: number) => (
+                <div key={index.toString()}>- {thing}</div>
               ))}
             </div>
           </div>
         ))}
-    </Container>
-  );
-};
+  </Container>
+);
 
 const Container = styled.div`
   .__title {

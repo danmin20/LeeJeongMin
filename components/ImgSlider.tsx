@@ -1,13 +1,13 @@
-import Image from "next/image";
-import styled from "styled-components";
-import { media } from "../styles/theme";
+import Image from 'next/image';
+import styled from 'styled-components';
+import { media } from '../styles/theme';
 
 const ImgSlider = () => (
   <div>
     <ImgSlide
       style={{
-        animationDelay: "0s",
-        color: "white",
+        animationDelay: '0s',
+        color: 'white',
       }}
     >
       <Image
@@ -19,8 +19,8 @@ const ImgSlider = () => (
     </ImgSlide>
     <ImgSlide
       style={{
-        animationDelay: "3s",
-        color: "white",
+        animationDelay: '3s',
+        color: 'white',
       }}
     >
       <Image
@@ -32,8 +32,8 @@ const ImgSlider = () => (
     </ImgSlide>
     <ImgSlide
       style={{
-        animationDelay: "6s",
-        color: "white",
+        animationDelay: '6s',
+        color: 'white',
       }}
     >
       <Image
@@ -45,8 +45,8 @@ const ImgSlider = () => (
     </ImgSlide>
     <ImgSlide
       style={{
-        animationDelay: "9s",
-        color: "white",
+        animationDelay: '9s',
+        color: 'white',
       }}
     >
       <Image
