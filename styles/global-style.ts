@@ -7,6 +7,9 @@ export const GlobalStyle = createGlobalStyle`
         outline: none;
         border: none;
     }
+    div[role="button"] {
+        cursor: pointer;
+    }
     html{
         font-family: "Montserrat", sans-serif;
     }

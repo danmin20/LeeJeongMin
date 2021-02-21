@@ -1,10 +1,24 @@
 import styled from "styled-components";
+import { media } from "../styles/theme";
 
 const ProgressBar = () => (
-  <div className="__progress">
+  <Container>
     <Progress />
-  </div>
+  </Container>
 );
+
+const Container = styled.div`
+  position: relative;
+  background-color: white;
+  height: 0.3rem;
+  width: 60%;
+  ${media.tablet} {
+    width: 80%;
+  }
+  ${media.mobile} {
+    width: 90%;
+  }
+`
 
 const Progress = styled.div`
   height: 0.3rem;

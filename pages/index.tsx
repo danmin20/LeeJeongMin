@@ -29,11 +29,11 @@ const Main_1 = () => {
   return (
     <Main1Container>
       <ImgSlider />
-      <div className="__text">
-        <div className="__text__name">LEE</div>
-        <div className="__text__name">JEONG</div>
-        <div className="__text__name">MIN</div>
-        <div className="__text__fe">FE Developer</div>
+      <div className="text">
+        <div className="text__name">LEE</div>
+        <div className="text__name">JEONG</div>
+        <div className="text__name">MIN</div>
+        <div className="text__fe">FE Developer</div>
       </div>
     </Main1Container>
   );
@@ -66,20 +66,14 @@ const Main_2 = () => {
           <Bold>발전해 나갈 기회</Bold>를 만들어주고자 합니다.
         </div>
       </TextBox>
-      <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          display: "flex",
-        }}
-      >
-        <Route onClick={() => router.push("/about")}>ABOUT</Route>
-        <Route onClick={() => window.open("https://velog.io/@danmin20")}>
+      <div className="routes">
+        <div className="routes__route" role="button" onClick={() => router.push("/about")}>ABOUT</div>
+        <div className="routes__route" role="button" onClick={() => window.open("https://velog.io/@danmin20")}>
           BLOG
-        </Route>
-        <Route onClick={() => window.open("https://github.com/danmin20")}>
+        </div>
+        <div className="routes__route" role="button" onClick={() => window.open("https://github.com/danmin20")}>
           GITHUB
-        </Route>
+        </div>
       </div>
     </Main2Container>
   );
@@ -95,7 +89,7 @@ const Main1Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  .__text {
+  .text {
     color: white;
     position: relative;
     font-weight: 600;
@@ -125,16 +119,31 @@ const Main2Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  .__progress {
-    position: relative;
-    background-color: white;
-    height: 0.3rem;
+  .routes {
+    position: absolute;
+    bottom: 0;
+    display: flex;
     width: 60%;
+    margin-bottom: 3rem;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 2rem;
     ${media.tablet} {
       width: 80%;
+      font-size: 1.5rem;
     }
     ${media.mobile} {
       width: 90%;
+      font-size: 1rem;
+    }
+
+    &__route {
+      &:hover {
+        background: ${({ theme }) => theme.color.gradient};
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
 `;
@@ -164,24 +173,6 @@ const Bold = styled.span`
   ${media.mobile} {
     margin-left: 0.1rem;
     font-size: 0.7rem;
-  }
-`;
-
-const Route = styled.div`
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 2rem;
-  margin: 3rem;
-  &:hover {
-    background: ${({ theme }) => theme.color.gradient};
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  ${media.mobile} {
-    font-size: 1rem;
-    margin: 1rem;
-    margin-bottom: 3rem;
   }
 `;
 
