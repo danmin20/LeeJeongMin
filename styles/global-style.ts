@@ -3,6 +3,9 @@ import { reset } from 'styled-reset';
 
 export const GlobalStyle = createGlobalStyle`
     ${reset}
+    ::-webkit-scrollbar { 
+        display: none !important;
+    }
     :focus {
         outline: none;
         border: none;
