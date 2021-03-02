@@ -136,7 +136,7 @@ const Main2Container = styled.div`
   justify-content: center;
   .routes {
     position: absolute;
-    bottom: 0;
+    bottom: 10rem;
     display: flex;
     width: 60%;
     margin-bottom: 3rem;
