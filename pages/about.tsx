@@ -43,6 +43,13 @@ const Info = () => (
             TwentyOZ ( 2020.06 ~ 2020.10 )`}
         </div>
       </div>
+      <div className="myInfo__content__title">Contact</div>
+      <div
+        role="button"
+        onClick={() => window.open('mailto:ljm991108@gmail.com')}
+        onKeyPress={() => window.open('mailto:ljm991108@gmail.com')}
+        tabIndex={0}
+      />ljm991108@gmail.com
     </div>
   </InfoContainer>
 );
@@ -89,6 +96,7 @@ const InfoContainer = styled.div`
     height: 100vh;
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     &__content {
