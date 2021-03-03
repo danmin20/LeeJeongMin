@@ -77,8 +77,8 @@ const CardBg = styled.div`
   right: 0;
   width: 100%;
   height: 8rem;
-  background: black;
-  opacity: 0.3;
+  background: gray;
+  opacity: 0.1;
   border-radius: 1rem;
   z-index: 0;
   ${media.mobile} {

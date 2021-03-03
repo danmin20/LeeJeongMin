@@ -12,7 +12,7 @@ const Container = styled.div`
   width: 100%;
   height: 110vh;
   overflow: hidden;
-  background: radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%);
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, black 100%);
   position: fixed;
   top: 0;
   left: 0;
