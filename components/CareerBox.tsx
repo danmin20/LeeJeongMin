@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { media } from '../styles/theme';
+import styled from "styled-components";
+import { media } from "../styles/theme";
 
 const CareerBox = ({ career }) => (
   <Container>
@@ -8,13 +8,15 @@ const CareerBox = ({ career }) => (
       <span className="__date">{career.date}</span>
     </div>
     <div className="__part">{career.part}</div>
-    {career.works
+    {/* {career.works
         && career.works.map((work, idx: number) => (
           <div key={idx.toString()} className="__work">
-            <div className="__work__title">
-              {work.title}
-              <span className="__work__person">{work.person}</span>
-            </div>
+            {work.title && (
+              <div className="__work__title">
+                {work.title}
+                <span className="__work__person">{work.person}</span>
+              </div>
+            )}
             <div style={{ display: 'flex', overflowX: 'scroll' }}>
               {work.stacks.map((stack: string, index: number) => (
                 <div key={index.toString()} className="__work__stack">
@@ -23,12 +25,12 @@ const CareerBox = ({ career }) => (
               ))}
             </div>
             <div className="__work__thing">
-              {work.things.map((thing: string, index: number) => (
+              {work.things?.map((thing: string, index: number) => (
                 <div key={index.toString()}>- {thing}</div>
               ))}
             </div>
           </div>
-        ))}
+        ))} */}
   </Container>
 );
 
@@ -45,7 +47,7 @@ const Container = styled.div`
     }
   }
   .__place {
-    margin-top: 3rem;
+    margin-top: 1rem;
     font-size: 2rem;
     font-weight: 600;
     ${media.mobile} {
@@ -54,8 +56,6 @@ const Container = styled.div`
   }
   .__part {
     padding: 1rem 0;
-    border-bottom: 1px solid white;
-    margin-bottom: 1rem;
     font-weight: 300;
     ${media.mobile} {
       font-size: 0.1rem;

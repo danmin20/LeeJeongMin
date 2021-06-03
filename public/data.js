@@ -1,13 +1,19 @@
 export const careers = [
   {
     name: 'Naver',
-    date: '2021.03 ~ 2021.04',
-    part: '예약플랫폼 프론트엔드 개발 인턴 (채용연계형)',
-    works: [],
+    date: '2021.03.02 ~ 2021.04.09',
+    part: 'Glace CIC / 스마트플레이스서비스 프론트엔드 개발 인턴',
+    works: [
+      {
+        // title: '예약/주문 방문 이력 지도 탐색',
+        // person: '(참여인원 : 1명)',
+        stacks: ['React', 'Next', 'Typescript', 'GraphQL', 'Apollo', 'Recoil'],
+      },
+    ],
   },
   {
     name: 'Megazone Cloud',
-    date: '2020.11 ~ 2021.02',
+    date: '2020.11.02 ~ 2021.02.28',
     part: 'Commercial Technology Center / CloudOne 프론트엔드 개발 인턴',
     works: [
       {
@@ -45,7 +51,7 @@ export const careers = [
   },
   {
     name: 'TwentyOZ',
-    date: '2020.06 ~ 2021.10',
+    date: '2020.06.29 ~ 2020.10.16',
     part: '프론트엔드 개발 인턴',
     works: [
       {

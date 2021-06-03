@@ -1,13 +1,14 @@
-import styled from 'styled-components';
-import Image from 'next/image';
-import ActivityBox from '../components/ActivityBox';
-import Background from '../components/Background';
-import CareerBox from '../components/CareerBox';
-import SkillBox from '../components/SkillBox';
-import Up from '../public/up.svg';
-import { activities, careers, skills } from '../public/data';
-import { media } from '../styles/theme';
-import TextAnimation from '../components/TextAnimation';
+import styled from "styled-components";
+import Image from "next/image";
+import ActivityBox from "../components/ActivityBox";
+import Background from "../components/Background";
+import CareerBox from "../components/CareerBox";
+import SkillBox from "../components/SkillBox";
+import Up from "../public/up.svg";
+import { activities, careers, skills } from "../public/data";
+import { media } from "../styles/theme";
+import TextAnimation from "../components/TextAnimation";
+import Link from "../public/link.svg";
 
 const About = () => (
   <>
@@ -27,29 +28,62 @@ const Info = () => (
           <Image src="/profile.jpeg" width={300} height={400} />
         </div>
         <div className="myInfo__content">
-          <div className="myInfo__content__title">학력</div>
-          {`경희대학교 재학 ( 2018.03 ~ )
-            경일여자고등학교 졸업 ( 2015.03 ~ 2018.02 )`}
-          <div className="myInfo__content__title">대외활동</div>
-          {`멋쟁이사자처럼 경희대 8기 운영진
-            SOPT 26기 파트원
-            디프만 8기 FE 개발자
-            디프만 9기 운영진
-            AUSG 4기 멤버
-            SOPT 27기 비활OB`}
-          <div className="myInfo__content__title">실무경험</div>
-          {`NAVER ( 2021.03 ~ 2021.04 )
-            MEGAZONE CLOUD ( 2020.11 ~ 2018.02 )
-            TwentyOZ ( 2020.06 ~ 2020.10 )`}
+          <div className="myInfo__content__title">Info</div>
+          <div>이정민</div>
+          <div>1999.11.08</div>
+          <div>경희대학교 컴퓨터공학과</div>
+          <div
+            role="button"
+            onClick={() =>
+              window.open(
+                "https://www.notion.so/danmin20/Resume-d7590c400a4242a4800d6f29ea5f35aa"
+              )
+            }
+            onKeyPress={() =>
+              window.open(
+                "https://www.notion.so/danmin20/Resume-d7590c400a4242a4800d6f29ea5f35aa"
+              )
+            }
+            tabIndex={0}
+          >
+            <div style={{ display: "flex", alignItems: "center" }}>
+              Resume
+              <div
+                style={{
+                  fill: "white",
+                  width: "12px",
+                  height: "12px",
+                  marginLeft: "0.3rem",
+                }}
+              >
+                <Link />
+              </div>
+            </div>
+          </div>
+          <div className="myInfo__content__title">Contact</div>
+          <div>010-4632-6807</div>
+          <div
+            role="button"
+            onClick={() => window.open("mailto:ljm991108@gmail.com")}
+            onKeyPress={() => window.open("mailto:ljm991108@gmail.com")}
+            tabIndex={0}
+          >
+            <div style={{ display: "flex", alignItems: "center" }}>
+              ljm991108@gmail.com
+              <div
+                style={{
+                  fill: "white",
+                  width: "12px",
+                  height: "12px",
+                  marginLeft: "0.3rem",
+                }}
+              >
+                <Link />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="myInfo__content__title">Contact</div>
-      <div
-        role="button"
-        onClick={() => window.open('mailto:ljm991108@gmail.com')}
-        onKeyPress={() => window.open('mailto:ljm991108@gmail.com')}
-        tabIndex={0}
-      />ljm991108@gmail.com
     </div>
   </InfoContainer>
 );
@@ -93,15 +127,14 @@ const InfoContainer = styled.div`
   color: white;
   .myInfo {
     width: 100%;
-    height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     &__content {
       margin-left: 3rem;
       white-space: pre-line;
+      line-height: 2rem;
       ${media.mobile} {
         margin-left: 0;
         margin-top: 3rem;
