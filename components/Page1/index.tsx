@@ -3,18 +3,12 @@ import TextAnimation from "./TextAnimation";
 import { media } from "styles/theme";
 
 const Page1 = () => (
-  <Container className="flex">
+  <Container className="flex fixed">
     <TextAnimation />
   </Container>
 );
 
 const Container = styled.div`
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  overflow: hidden;
-  position: fixed;
   z-index: -1;
   background-color: ${({ theme }) => theme.color.black};
 

@@ -22,4 +22,12 @@ export const GlobalStyle = createGlobalStyle`
         align-items: center;
         justify-content: center;
     }
+    .fixed{
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+    }
 `;

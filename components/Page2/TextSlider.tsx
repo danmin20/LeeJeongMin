@@ -44,7 +44,7 @@ const SlideContainer = styled.div`
 
 const Slide = styled.div`
   font-size: 4.5rem;
-  font-weight: 700;
+  font-weight: 800;
   padding-left: 4%;
   width: 100%;
   .__text {

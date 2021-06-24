@@ -24,7 +24,7 @@ const TextAnimation = () => {
         toggleActions: "play play play play",
         scrub: 1,
       },
-      x: 2000,
+      x: 1500,
       duration: 1,
     };
 
@@ -32,11 +32,11 @@ const TextAnimation = () => {
     gsap.to(borderText1.current, config);
     gsap.to(text2.current, {
       ...config,
-      x: -2000,
+      x: -1500,
     });
     gsap.to(borderText2.current, {
       ...config,
-      x: -2000,
+      x: -1500,
     });
   }, []);
 
