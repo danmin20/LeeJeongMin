@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -40,8 +40,16 @@ const TextAnimation = () => {
     });
   }, []);
 
+  const [isShown, setIsShown] = useState(true);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (innerHeight < pageYOffset) setIsShown(false);
+      else setIsShown(true);
+    });
+  }, []);
+
   return (
-    <Container ref={startTrigger}>
+    <Container ref={startTrigger} isShown={isShown}>
       <div className="text">
         <div className="text__content" ref={text1}>
           LEE JEONG MIN
@@ -65,12 +73,13 @@ const TextAnimation = () => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.div<{ isShown: boolean }>`
   width: 100%;
   height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
+  opacity: ${({ isShown }) => (isShown ? 1 : 0)};
   .text {
     top: 25vh;
     width: 100%;

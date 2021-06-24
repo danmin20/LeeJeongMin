@@ -3,7 +3,7 @@ import Image from "next/image";
 import ActivityBox from "../components/ActivityBox";
 import Background from "../components/Background";
 import CareerBox from "../components/CareerBox";
-import SkillBox from "../components/SkillBox";
+import SkillBox from "../components/Page3/SkillBox";
 import Up from "../public/up.svg";
 import { activities, careers, skills } from "../public/data";
 import { media } from "../styles/theme";

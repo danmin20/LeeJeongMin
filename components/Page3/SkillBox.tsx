@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import { media } from "../styles/theme";
+import { media } from "../../styles/theme";
 
 const SkillBox = ({ skill }: any) => (
-  <Container>
+  <Container data-aos="flip-left">
     <div className="name">{skill.name}</div>
     <div className="contents">
       {skill.contents.map((content: string, idx: number) => (
         <div key={idx.toString()} className="contents__content">
-          - {content}
+          {content}
         </div>
       ))}
     </div>
@@ -15,28 +15,39 @@ const SkillBox = ({ skill }: any) => (
 );
 
 const Container = styled.div`
+  border: 0.2rem solid ${({ theme }) => theme.color.blue};
+  border-radius: 2rem;
+  margin: 2rem;
+  padding: 2rem;
+  position: relative;
   .name {
-    margin-top: 3rem;
+    transform: rotate(-10deg);
+    position: absolute;
+    left: -1.5rem;
+    top: -1.5rem;
+    border: 0.2rem solid ${({ theme }) => theme.color.white};
+    color: ${({ theme }) => theme.color.blue};
+    background-color: ${({ theme }) => theme.color.black};
+    padding: 0.5rem 1rem;
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 800;
     ${media.mobile} {
       font-size: 1rem;
       margin-top: 2rem;
     }
   }
   .contents {
-    position: relative;
-    margin: 2rem 0;
+    margin-top: 1.5rem;
+    color: ${({ theme }) => theme.color.white};
     line-height: 150%;
-    font-weight: 300;
     ${media.mobile} {
       font-size: 0.3rem;
       margin: 1rem 0;
     }
     &__content {
+      line-height: 2rem;
       position: relative;
       z-index: 3;
-      color: white;
     }
   }
 `;

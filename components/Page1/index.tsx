@@ -4,11 +4,13 @@ import { media } from "styles/theme";
 
 const TextAnimation = dynamic(() => import("./TextAnimation"));
 
-const Page1 = () => (
-  <Container className="flex fixed">
-    <TextAnimation />
-  </Container>
-);
+const Page1 = () => {
+  return (
+    <Container className="flex fixed">
+      <TextAnimation />
+    </Container>
+  );
+};
 
 const Container = styled.div`
   z-index: -1;
