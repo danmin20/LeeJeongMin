@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^10.0.7",
+    "@types/gsap": "^3.0.0",
     "@types/node": "^14.14.25",
     "@types/react": "^17.0.1",
     "@types/styled-components": "^5.1.7",

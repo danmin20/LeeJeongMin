@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Background = () => (
   <Container>
@@ -12,12 +12,10 @@ const Container = styled.div`
   width: 100%;
   height: 110vh;
   overflow: hidden;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, black 100%);
   position: fixed;
+  z-index: 0;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
 `;
 
 export default Background;

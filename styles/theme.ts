@@ -1,14 +1,19 @@
-import { DefaultTheme } from 'styled-components';
+import { DefaultTheme } from "styled-components";
 
 export const theme: DefaultTheme = {
   color: {
-    gradient: 'linear-gradient(128.93deg, #00ff94 22.41%, #0038ff 93.45%)',
-    gradientPurple: 'linear-gradient(128.93deg, white 1%, #958fa9 50%)',
-    purple: '#958fa9',
+    black: "#222831",
+    gray: "#393E46",
+    blue: "#00ADB5",
+    white: "#EEEEEE",
+    gradient: "linear-gradient(128.93deg, #00ADB5 22.41%, #393E46 93.45%)",
+    gradientPurple: "linear-gradient(128.93deg, white 1%, #958fa9 50%)",
+    purple: "#958fa9",
   },
 };
 
-const customMediaQuery = (maxWidth: number): string => `@media (max-width: ${maxWidth}px)`;
+const customMediaQuery = (maxWidth: number): string =>
+  `@media (max-width: ${maxWidth}px)`;
 
 export const media = {
   custom: customMediaQuery,
