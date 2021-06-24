@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import { media } from "../styles/theme";
+import { media } from "../../styles/theme";
 
-const CareerBox = ({ career }: any) => (
-  <Container>
-    <div className="__place">
-      {career.name}
-      <span className="__date">{career.date}</span>
+const CareerBox = ({ career, isEnd }: any) => (
+  <Container {...{ isEnd }}>
+    <div className="title">
+      {career.title}
+      <span className="date">{career.date}</span>
     </div>
-    <div className="__part">{career.part}</div>
+    <div className="about">{career.about}</div>
     {/* {career.works
         && career.works.map((work, idx: number) => (
           <div key={idx.toString()} className="__work">
@@ -34,34 +34,27 @@ const CareerBox = ({ career }: any) => (
   </Container>
 );
 
-const Container = styled.div`
-  .__title {
-    font-size: 3rem;
-    font-weight: 600;
-    background: ${({ theme }) => theme.color.gradient};
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    ${media.mobile} {
-      font-size: 2rem;
-    }
-  }
-  .__place {
+const Container = styled.div<{ isEnd: boolean }>`
+  display: flex;
+  flex-direction: column;
+  align-items: ${({ isEnd }) => (isEnd ? "flex-start" : "flex-end")};
+  .title {
     margin-top: 1rem;
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: ${({ theme }) => theme.color.green};
     ${media.mobile} {
       font-size: 1rem;
     }
   }
-  .__part {
+  .about {
     padding: 1rem 0;
-    font-weight: 300;
     ${media.mobile} {
       font-size: 0.1rem;
     }
   }
-  .__date {
+  .date {
+    color: ${({ theme }) => theme.color.gray};
     font-size: 1rem;
     margin-left: 1rem;
     ${media.mobile} {
@@ -69,7 +62,7 @@ const Container = styled.div`
       margin-left: 0.3rem;
     }
   }
-  .__work {
+  /* .__work {
     width: 100%;
     height: auto;
     border-bottom: 1px solid gray;
@@ -110,7 +103,7 @@ const Container = styled.div`
         font-size: 0.3rem;
       }
     }
-  }
+  } */
 `;
 
 export default CareerBox;

@@ -28,7 +28,6 @@ const Page3 = () => {
             </div>
           ))}
         </div>
-        {/* skills */}
         <div className="skills">
           {skills.map((skill, idx) => (
             <SkillBox key={idx.toString()} skill={skill} />
@@ -38,21 +37,6 @@ const Page3 = () => {
     </div>
   );
 };
-
-const Title = styled.div<{ text: string }>`
-  width: 100%;
-  color: ${({ theme }) => theme.color.blue};
-  position: relative;
-  font-size: 3rem;
-  font-weight: 800;
-  ::after {
-    content: "${({ text }) => `${text}`}";
-    position: absolute;
-    color: ${({ theme }) => theme.color.white};
-    top: -0.3rem;
-    left: -0.3rem;
-  }
-`;
 
 const Container = styled.div`
   max-width: 1373px;
@@ -78,6 +62,21 @@ const Container = styled.div`
     margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+`;
+
+const Title = styled.div<{ text: string }>`
+  width: 100%;
+  color: ${({ theme }) => theme.color.blue};
+  position: relative;
+  font-size: 3rem;
+  font-weight: 800;
+  ::after {
+    content: "${({ text }) => `${text}`}";
+    position: absolute;
+    color: ${({ theme }) => theme.color.white};
+    top: -0.3rem;
+    left: -0.3rem;
   }
 `;
 

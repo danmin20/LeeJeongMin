@@ -10,6 +10,10 @@ declare module "styled-components" {
       gradient: "linear-gradient(128.93deg, #00ADB5 22.41%, #393E46 93.45%)";
       gradientPurple: "linear-gradient(128.93deg, white 1%, #958fa9 50%)";
       purple: "#958fa9";
+
+      green: "#346751";
+      red: "#C84B31";
+      baige: "#ECDBBA";
     };
   }
 }

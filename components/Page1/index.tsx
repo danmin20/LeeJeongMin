@@ -13,9 +13,6 @@ const Page1 = () => {
 };
 
 const Container = styled.div`
-  z-index: -1;
-  background-color: ${({ theme }) => theme.color.black};
-
   .text {
     color: ${({ theme }) => theme.color.white};
     position: relative;

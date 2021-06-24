@@ -3,7 +3,7 @@ import { media } from "../../styles/theme";
 
 const SkillBox = ({ skill }: any) => (
   <Container data-aos="flip-left">
-    <div className="name">{skill.name}</div>
+    <div className="name">{skill.title}</div>
     <div className="contents">
       {skill.contents.map((content: string, idx: number) => (
         <div key={idx.toString()} className="contents__content">

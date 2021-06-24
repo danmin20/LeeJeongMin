@@ -3,6 +3,7 @@ import Page2 from "components/Page2";
 import Page3 from "components/Page3";
 import Background from "components/Background";
 import { useEffect } from "react";
+import Page4 from "components/Page4";
 
 const Index = () => {
   useEffect(() => {
@@ -15,6 +16,7 @@ const Index = () => {
       <Page1 />
       <Page2 />
       <Page3 />
+      <Page4 />
     </>
   );
 };
