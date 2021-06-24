@@ -1,13 +1,29 @@
 import styled from "styled-components";
 import Memoji from "public/memoji.svg";
+import Cursor from "public/cursor.svg";
+import { useState } from "react";
 
 const Information = () => {
+  const [isHover, setIsHover] = useState(false);
   return (
-    <Conatiner className="flex">
-      <div className="memoji">
+    <Conatiner className="flex" {...{ isHover }}>
+      <div
+        className="memoji"
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+      >
         <div className="memoji__box">Developer</div>
         <Memoji className="memoji__svg" />
+        {!isHover && <Cursor className="memoji__cursor" />}
         <div className="memoji__circle" />
+        <div className="memoji__info-circle" />
+        <div className="memoji__info flex">
+          {`
+            이정민
+            1999.11.08
+            Kyunghee Univ.
+            `}
+        </div>
       </div>
       <div className="info">
         <div
@@ -43,11 +59,12 @@ const Information = () => {
   );
 };
 
-const Conatiner = styled.div`
+const Conatiner = styled.div<{ isHover: boolean }>`
   padding: 5rem;
   position: relative;
   background-color: ${({ theme }) => theme.color.white};
   .memoji {
+    cursor: pointer;
     position: relative;
     &__box {
       position: absolute;
@@ -67,11 +84,42 @@ const Conatiner = styled.div`
       left: 3rem;
       top: 3rem;
     }
+    &__cursor {
+      position: absolute;
+      left: 1.2rem;
+      bottom: 1.2rem;
+      fill: #fff;
+      transform: rotate(60deg);
+      animation: fade 1s linear infinite;
+    }
     &__circle {
       width: 13rem;
       height: 13rem;
       border-radius: 50%;
       background-color: ${({ theme }) => theme.color.blue};
+    }
+    &__info-circle {
+      opacity: ${({ isHover }) => (isHover ? 0.8 : 0)};
+      transition: 0.3s;
+      position: absolute;
+      top: 0;
+      width: 13rem;
+      height: 13rem;
+      border-radius: 50%;
+      background-color: ${({ theme }) => theme.color.gray};
+    }
+    &__info {
+      font-weight: 500;
+      opacity: ${({ isHover }) => (isHover ? 1 : 0)};
+      transition: 0.2s;
+      position: absolute;
+      top: -1rem;
+      color: #fff;
+      white-space: pre-line;
+      text-align: center;
+      line-height: 2rem;
+      width: 13rem;
+      height: 13rem;
     }
   }
   .info {

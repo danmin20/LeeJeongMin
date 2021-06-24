@@ -127,15 +127,10 @@ $shadows-big: multiple-box-shadow(100);
         opacity: 0;
     }
 
-    5% {
+    50% {
         opacity: 1;
     }
-
-    15% {
-        opacity: 1;
-    }
-
-    26% {
+    100% {
         opacity: 0;
     }
 }
