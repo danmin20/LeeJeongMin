@@ -29,9 +29,24 @@ const ProjectBox = ({ project, idx }: any) => {
           ))}
         </div>
         <div className="icons">
-          {project?.github && <Github className="svg" />}
-          {project?.website && <Website className="svg" />}
-          {project?.download && <Download className="svg" />}
+          {project?.github && (
+            <Github
+              className="svg"
+              onClick={() => window.open(project.github)}
+            />
+          )}
+          {project?.website && (
+            <Website
+              className="svg"
+              onClick={() => window.open(project.website)}
+            />
+          )}
+          {project?.download && (
+            <Download
+              className="svg"
+              onClick={() => window.open(project.download)}
+            />
+          )}
         </div>
       </div>
     </Container>

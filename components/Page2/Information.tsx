@@ -12,15 +12,15 @@ const Information = () => {
       <div className="info">
         <div
           className="info__button"
-          onClick={() => window.open("tel:010-4632-6807")}
-        >
-          010-4632-6807
-        </div>
-        <div
-          className="info__button"
           onClick={() => window.open("mailto:ljm991108@gmail.com")}
         >
           ljm991108@gmail.com
+        </div>
+        <div
+          className="info__button"
+          onClick={() => window.open("https://github.com/danmin20")}
+        >
+          GITHUB
         </div>
         <div
           className="info__button"
@@ -30,9 +30,13 @@ const Information = () => {
         </div>
         <div
           className="info__button"
-          onClick={() => window.open("https://github.com/danmin20")}
+          onClick={() =>
+            window.open(
+              "https://www.notion.so/danmin20/Resume-7c32047349064df5b0de46f325550e22"
+            )
+          }
         >
-          GITHUB
+          RESUME
         </div>
       </div>
     </Conatiner>
