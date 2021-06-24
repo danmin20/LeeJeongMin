@@ -45,6 +45,14 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta charSet="utf-8" />
+          <link rel="shortcut icon" href="/memoji.svg" type="image/svg" />
+          <meta property="og:title" content="이정민 - Leejeongmin" />
+          <meta property="og:image" content="/main.png" />
+          <meta
+            property="og:description"
+            content="jeongmin's dev portfolio site"
+          />
+          <meta property="og:url" content="//leejeongmin.varcel.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap"
