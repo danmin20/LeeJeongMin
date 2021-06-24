@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media } from "../styles/theme";
+import { media } from "../../styles/theme";
 
 const TextSlider = () => (
   <SlideContainer>

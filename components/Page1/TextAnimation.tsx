@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { media } from "../styles/theme";
+import { media } from "../../styles/theme";
 
 gsap.registerPlugin(ScrollTrigger);
 

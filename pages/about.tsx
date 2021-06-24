@@ -7,7 +7,7 @@ import SkillBox from "../components/SkillBox";
 import Up from "../public/up.svg";
 import { activities, careers, skills } from "../public/data";
 import { media } from "../styles/theme";
-import TextAnimation from "../components/TextAnimation";
+import TextAnimation from "../components/Page1/TextAnimation";
 import Link from "../public/link.svg";
 
 const About = () => (
