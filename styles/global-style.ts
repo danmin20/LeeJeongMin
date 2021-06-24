@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     html{
         font-family: "Montserrat", sans-serif;
         color: ${({ theme }) => theme.color.gray};
+        scroll-behavior: smooth;
     }
     .flex{
         display: flex;
