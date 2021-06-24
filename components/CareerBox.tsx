@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { media } from "../styles/theme";
 
-const CareerBox = ({ career }) => (
+const CareerBox = ({ career }: any) => (
   <Container>
     <div className="__place">
       {career.name}

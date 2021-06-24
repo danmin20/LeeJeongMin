@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { media } from '../styles/theme';
+import styled from "styled-components";
+import { media } from "../styles/theme";
 
-const SkillBox = ({ skill }) => (
+const SkillBox = ({ skill }: any) => (
   <Container>
     <div className="name">{skill.name}</div>
     <div className="contents">

@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import { media } from '../styles/theme';
+import styled from "styled-components";
+import { media } from "../styles/theme";
 
-const ActivityBox = ({ activity }) => (
+const ActivityBox = ({ activity }: any) => (
   <Container>
-    <div style={{ position: 'relative', marginTop: '1rem' }}>
+    <div style={{ position: "relative", marginTop: "1rem" }}>
       <Card>
         <div className="__name">
           {activity.title}
