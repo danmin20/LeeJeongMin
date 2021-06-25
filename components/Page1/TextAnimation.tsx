@@ -89,14 +89,6 @@ const Container = styled.div<{ isShown: boolean }>`
     font-size: 10rem;
     line-height: 14.6rem;
     white-space: nowrap;
-    ${media.tablet} {
-      line-height: 6rem;
-      font-size: 5rem;
-    }
-    ${media.mobile} {
-      line-height: 3rem;
-      font-size: 2rem;
-    }
     &__content {
       color: ${({ theme }) => theme.color.blue};
       &__border {
@@ -118,14 +110,6 @@ const Circle = styled.div`
   height: 35rem;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.color.white};
-  ${media.tablet} {
-    width: 20rem;
-    height: 20rem;
-  }
-  ${media.mobile} {
-    width: 10rem;
-    height: 10rem;
-  }
 `;
 
 export default TextAnimation;

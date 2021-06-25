@@ -53,6 +53,12 @@ const Index = () => {
   );
 };
 
+const Container = styled.div`
+  /* width: 100%; */
+  /* display: flex; */
+  flex-direction: column;
+`;
+
 const ScrollBtn = styled.div`
   width: 3rem;
   height: 3rem;

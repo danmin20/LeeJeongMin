@@ -31,19 +31,11 @@ const Container = styled.div`
     padding: 0.5rem 1rem;
     font-size: 2rem;
     font-weight: 800;
-    ${media.mobile} {
-      font-size: 1rem;
-      margin-top: 2rem;
-    }
   }
   .contents {
     margin-top: 1.5rem;
     color: ${({ theme }) => theme.color.white};
     line-height: 150%;
-    ${media.mobile} {
-      font-size: 0.3rem;
-      margin: 1rem 0;
-    }
     &__content {
       line-height: 2rem;
       position: relative;

@@ -53,14 +53,6 @@ const Slide = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  ${media.tablet} {
-    font-size: 3rem;
-    padding-left: 2%;
-  }
-  ${media.mobile} {
-    font-size: 2rem;
-    padding-left: 1%;
-  }
 `;
 
 export default TextSlider;

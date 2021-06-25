@@ -19,7 +19,6 @@ const Page5 = () => {
 };
 
 const Container = styled.div`
-  width: 100%;
   position: relative;
   overflow-x: hidden;
   margin-top: 10rem;

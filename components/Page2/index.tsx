@@ -5,7 +5,7 @@ import ProgressBar from "./ProgressBar";
 import Information from "./Information";
 
 const Page2 = () => (
-  <div style={{ padding: "0 2rem" }}>
+  <div className="flex">
     <Container className="flex">
       <TextSlider />
       <ProgressBar />
@@ -33,7 +33,7 @@ const Page2 = () => (
 
 const Container = styled.div`
   border-radius: 2rem;
-  width: 100%;
+  max-width: 1373px;
   margin-top: 100vh;
   height: 100vh;
   padding-top: 3rem;
@@ -49,14 +49,6 @@ const TextBox = styled.div`
   line-height: 230%;
   margin-top: 3rem;
   font-size: 1.1rem;
-  ${media.tablet} {
-    width: 80%;
-    font-size: 0.9rem;
-  }
-  ${media.mobile} {
-    width: 90%;
-    font-size: 0.1rem;
-  }
 `;
 
 const Bold = styled.span`
@@ -67,13 +59,6 @@ const Bold = styled.span`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  ${media.tablet} {
-    font-size: 1.2rem;
-  }
-  ${media.mobile} {
-    margin-left: 0.1rem;
-    font-size: 0.7rem;
-  }
 `;
 
 export default Page2;

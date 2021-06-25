@@ -13,24 +13,19 @@ const Page1 = () => {
 };
 
 const Container = styled.div`
+  width: 100%;
   .text {
     color: ${({ theme }) => theme.color.white};
     position: relative;
     font-weight: 600;
     &__name {
       font-size: 5rem;
-      ${media.mobile} {
-        font-size: 4rem;
-      }
     }
     &__fe {
       font-weight: 100;
       margin-top: 5rem;
       font-size: 3rem;
       color: ${({ theme }) => theme.color.blue};
-      ${media.mobile} {
-        font-size: 2rem;
-      }
     }
   }
 `;

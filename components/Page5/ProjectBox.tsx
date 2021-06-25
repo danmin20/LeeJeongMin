@@ -116,7 +116,7 @@ const Container = styled.div`
   }
 
   .green-container {
-    margin-right: 10rem;
+    margin-right: 30rem;
     border: 0.1rem solid ${({ theme }) => theme.color.neonGreen};
     .title {
       color: #000;
@@ -137,7 +137,7 @@ const Container = styled.div`
   }
 
   .blue-container {
-    margin-left: 10rem;
+    margin-left: 30rem;
     border: 0.1rem solid ${({ theme }) => theme.color.neonBlue};
     .title {
       color: #fff;

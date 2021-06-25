@@ -29,7 +29,7 @@ const Container = styled.div<{ bgColor: string }>`
   background-color: ${({ bgColor }) => bgColor};
   transition: 0.2s;
   width: 100%;
-  height: 110vh;
+  height: 100%;
   overflow: hidden;
   position: fixed;
   z-index: -1;

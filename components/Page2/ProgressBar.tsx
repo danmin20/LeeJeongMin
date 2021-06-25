@@ -11,12 +11,6 @@ const Container = styled.div`
   position: relative;
   height: 0.3rem;
   width: 60%;
-  ${media.tablet} {
-    width: 80%;
-  }
-  ${media.mobile} {
-    width: 90%;
-  }
 `;
 
 const Progress = styled.div`
