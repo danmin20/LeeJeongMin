@@ -41,7 +41,6 @@ const Page3 = () => {
 const Container = styled.div`
   max-width: 1373px;
   height: 100vh;
-  padding: 0 5rem;
   box-sizing: border-box;
   flex-direction: column;
   .strong {
