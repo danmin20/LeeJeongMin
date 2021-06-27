@@ -30,7 +30,6 @@ const Container = styled.div<{ bgColor: string }>`
   transition: 0.2s;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   position: fixed;
   z-index: -1;
   top: 0;

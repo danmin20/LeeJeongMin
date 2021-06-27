@@ -9,6 +9,7 @@ import Lottie from "react-lottie";
 import Scroll from "public/scroll.json";
 import styled from "styled-components";
 import Up from "public/up.svg";
+import { media } from "styles/theme";
 
 const Index = () => {
   const [isScrollable, setIsScrollable] = useState(true);
@@ -28,14 +29,14 @@ const Index = () => {
   };
 
   return (
-    <>
+    <Container>
       <Background />
       <Page1 />
       <Page2 />
       <Page3 />
       <Page4 />
       <Page5 />
-      <ScrollBtn className="flex">
+      <ScrollBtn>
         {isScrollable ? (
           <Lottie
             options={lottieOptions}
@@ -49,17 +50,19 @@ const Index = () => {
           />
         )}
       </ScrollBtn>
-    </>
+    </Container>
   );
 };
 
 const Container = styled.div`
-  /* width: 100%; */
-  /* display: flex; */
-  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
 `;
 
 const ScrollBtn = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 3rem;
   height: 3rem;
   background-color: white;
@@ -69,6 +72,10 @@ const ScrollBtn = styled.div`
   right: 3rem;
   z-index: 10;
   opacity: 0.5;
+  ${media.mobile} {
+    width: 5rem;
+    height: 5rem;
+  }
 `;
 
 export default Index;

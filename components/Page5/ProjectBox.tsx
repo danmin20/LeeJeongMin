@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Github from "public/github.svg";
 import Website from "public/website.svg";
 import Download from "public/download.svg";
+import { media } from "styles/theme";
 
 const ProjectBox = ({ project, idx }: any) => {
   const isEven = (idx + 1) % 2 === 0;
@@ -62,6 +63,9 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    ${media.mobile} {
+      margin-bottom: 1rem;
+    }
     .title {
       font-weight: 800;
       position: absolute;
@@ -75,6 +79,9 @@ const Container = styled.div`
       position: absolute;
       background-color: #101010;
       top: -0.1rem;
+      ${media.mobile} {
+        top: -0.2rem;
+      }
     }
     .skills {
       display: flex;
@@ -86,6 +93,22 @@ const Container = styled.div`
         border-radius: 0.5rem;
         :not(:first-child) {
           margin-left: 0.5rem;
+          ${media.mobile} {
+            margin-left: 0;
+          }
+        }
+      }
+      ${media.mobile} {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        &__skill {
+          margin-right: 0.5rem;
+          margin-top: 0.3rem;
+          padding: 0.2rem 0.3rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
         }
       }
     }
@@ -96,21 +119,29 @@ const Container = styled.div`
     }
     .content {
       line-height: 1.5rem;
+      ${media.mobile} {
+        line-height: 2rem;
+      }
     }
     .icons {
       display: flex;
       position: absolute;
       bottom: -1rem;
       right: 2rem;
+      ${media.mobile} {
+        bottom: -2.5rem;
+      }
     }
     .svg {
       cursor: pointer;
-      width: 30;
       :hover {
         fill: white;
       }
       :not(:last-child) {
         margin-right: 0.5rem;
+      }
+      ${media.mobile} {
+        width: 3rem;
       }
     }
   }
@@ -134,6 +165,9 @@ const Container = styled.div`
     .svg {
       fill: ${({ theme }) => theme.color.neonGreen};
     }
+    ${media.mobile} {
+      margin-right: 0;
+    }
   }
 
   .blue-container {
@@ -154,6 +188,9 @@ const Container = styled.div`
     }
     .svg {
       fill: ${({ theme }) => theme.color.neonBlue};
+    }
+    ${media.mobile} {
+      margin-left: 0;
     }
   }
 `;

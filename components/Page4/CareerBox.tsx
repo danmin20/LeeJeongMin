@@ -28,6 +28,9 @@ const Container = styled.div<{ isEnd: boolean }>`
     color: ${({ theme }) => theme.color.gray};
     font-size: 1rem;
     margin-left: 1rem;
+    ${media.mobile} {
+      font-weight: 600;
+    }
   }
 `;
 

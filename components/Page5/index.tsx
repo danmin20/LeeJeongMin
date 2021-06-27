@@ -1,5 +1,6 @@
 import { projects } from "public/data";
 import styled from "styled-components";
+import { media } from "styles/theme";
 import ProjectBox from "./ProjectBox";
 
 const Page5 = () => {
@@ -35,6 +36,9 @@ const Container = styled.div`
       width: 100%;
       color: white;
     }
+    ${media.mobile} {
+      padding: 7rem 4rem;
+    }
   }
   .text {
     font-size: 1.2rem;
@@ -58,6 +62,11 @@ const Title = styled.div<{ text: string }>`
   font-weight: 800;
   left: 10rem;
   width: 100%;
+  ${media.mobile} {
+    font-size: 6rem;
+    left: 5rem;
+    top: 1rem;
+  }
 
   ::after {
     content: "${({ text }) => `${text}`}";

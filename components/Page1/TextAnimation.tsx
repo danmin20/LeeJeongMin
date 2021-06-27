@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const TextAnimation = () => {
   const startTrigger = useRef(null);
+
   const text1 = useRef(null);
   const text2 = useRef(null);
   const borderText1 = useRef(null);
@@ -49,27 +50,37 @@ const TextAnimation = () => {
   }, []);
 
   return (
-    <Container ref={startTrigger} isShown={isShown}>
-      <div className="text">
-        <div className="text__content" ref={text1}>
-          LEE JEONG MIN
+    <>
+      <Container ref={startTrigger} isShown={isShown}>
+        <div className="text">
+          <div className="text__content" ref={text1}>
+            LEE JEONG MIN
+          </div>
+          <div className="text__content second" ref={text2}>
+            FRONTEND
+          </div>
         </div>
-        <div className="text__content second" ref={text2}>
-          FRONTEND
+        <div
+          style={{
+            width: "100%",
+            height: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Circle />
         </div>
-      </div>
-      <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
-        <Circle />
-      </div>
-      <div className="text">
-        <div className="text__content__border" ref={borderText1}>
-          LEE JEONG MIN
+        <div className="text">
+          <div className="text__content__border" ref={borderText1}>
+            LEE JEONG MIN
+          </div>
+          <div className="text__content__border second" ref={borderText2}>
+            FRONTEND
+          </div>
         </div>
-        <div className="text__content__border second" ref={borderText2}>
-          FRONTEND
-        </div>
-      </div>
-    </Container>
+      </Container>
+    </>
   );
 };
 
@@ -96,11 +107,18 @@ const Container = styled.div<{ isShown: boolean }>`
         -webkit-text-stroke: 0.02em ${({ theme }) => theme.color.blue};
       }
     }
+    ${media.mobile} {
+      white-space: pre-line;
+      line-height: 10rem;
+    }
   }
   .second {
     position: absolute;
     left: auto;
     right: 0;
+    ${media.mobile} {
+      font-size: 6rem;
+    }
   }
 `;
 

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { careers, activities } from "public/data";
 import CareerBox from "./CareerBox";
+import { media } from "styles/theme";
 
 const Page4 = () => {
   return (
@@ -61,6 +62,9 @@ const Container = styled.div`
     position: absolute;
     &__content {
       flex: 0.8;
+      ${media.mobile} {
+        flex: 1;
+      }
     }
     :first-child {
       padding-bottom: 2rem;
@@ -68,6 +72,11 @@ const Container = styled.div`
       border-right-width: 0.5rem;
       top: 2rem;
       right: 5rem;
+      ${media.mobile} {
+        justify-content: flex-end;
+        right: 3rem;
+        padding-right: 3rem;
+      }
     }
     :last-child {
       padding-top: 2rem;
@@ -75,6 +84,11 @@ const Container = styled.div`
       border-left-width: 0.5rem;
       bottom: 2rem;
       left: 5rem;
+      ${media.mobile} {
+        justify-content: flex-start;
+        left: 3rem;
+        padding-left: 3rem;
+      }
     }
   }
   .left {

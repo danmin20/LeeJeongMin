@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import Memoji from "public/memoji.svg";
+import MemojiMobile from "public/memoji-mobile.svg";
 import Cursor from "public/cursor.svg";
 import { useState } from "react";
+import { media } from "styles/theme";
 
 const Information = () => {
   const [isHover, setIsHover] = useState(false);
@@ -13,7 +15,8 @@ const Information = () => {
         onMouseLeave={() => setIsHover(false)}
       >
         <div className="memoji__box">Developer</div>
-        <Memoji className="memoji__svg" />
+        <Memoji className="memoji__svg pc-only" />
+        <MemojiMobile className="memoji__svg mobile-only" />
         {!isHover && <Cursor className="memoji__cursor" />}
         <div className="memoji__circle" />
         <div className="memoji__info-circle" />
@@ -63,6 +66,9 @@ const Conatiner = styled.div<{ isHover: boolean }>`
   padding: 5rem;
   position: relative;
   background-color: ${({ theme }) => theme.color.white};
+  ${media.mobile} {
+    flex-direction: column;
+  }
   .memoji {
     cursor: pointer;
     position: relative;
@@ -135,6 +141,10 @@ const Conatiner = styled.div<{ isHover: boolean }>`
     align-items: center;
     justify-content: center;
     border: 0.2rem solid ${({ theme }) => theme.color.blue};
+    ${media.mobile} {
+      margin-top: 5rem;
+      margin-left: 0;
+    }
 
     &__button {
       cursor: pointer;

@@ -31,6 +31,11 @@ const Container = styled.div`
     padding: 0.5rem 1rem;
     font-size: 2rem;
     font-weight: 800;
+    ${media.mobile} {
+      font-size: 1.8rem;
+      left: -1rem;
+      top: -1rem;
+    }
   }
   .contents {
     margin-top: 1.5rem;
@@ -40,6 +45,9 @@ const Container = styled.div`
       line-height: 2rem;
       position: relative;
       z-index: 3;
+      ${media.mobile} {
+        margin-top: 0.7rem;
+      }
     }
   }
 `;

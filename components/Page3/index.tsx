@@ -1,5 +1,6 @@
 import { skills } from "public/data";
 import styled from "styled-components";
+import { media } from "styles/theme";
 import SkillBox from "./SkillBox";
 
 const strongList = [
@@ -12,7 +13,7 @@ const strongList = [
   "Recoil",
   "SCSS",
   "Storybook",
-  "Styled-component",
+  "Styled",
   "Emotion",
 ];
 
@@ -43,17 +44,30 @@ const Container = styled.div`
   height: 100vh;
   box-sizing: border-box;
   flex-direction: column;
+  ${media.mobile} {
+    height: auto;
+    margin: 5rem 0;
+  }
   .strong {
-    width: 100%;
+    width: 90%;
     margin-top: 2rem;
     justify-content: space-between;
     overflow: scroll;
+    ${media.mobile} {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
     &__skill {
       border: 0.2rem solid white;
       font-weight: 500;
       padding: 0.2rem 0.5rem;
       border-radius: 1rem;
       color: ${({ theme }) => theme.color.white};
+      ${media.mobile} {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        text-align: center;
+      }
     }
   }
   .skills {
@@ -61,15 +75,24 @@ const Container = styled.div`
     margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    ${media.mobile} {
+      margin: 0;
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+    }
   }
 `;
 
 const Title = styled.div<{ text: string }>`
-  width: 100%;
+  width: 90%;
   color: ${({ theme }) => theme.color.blue};
   position: relative;
   font-size: 3rem;
   font-weight: 800;
+  ${media.mobile} {
+    margin-left: 2.5rem;
+  }
   ::after {
     content: "${({ text }) => `${text}`}";
     position: absolute;

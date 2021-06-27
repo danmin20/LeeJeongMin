@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import dynamic from "next/dynamic";
-import { media } from "styles/theme";
 
 const TextAnimation = dynamic(() => import("./TextAnimation"));
 
