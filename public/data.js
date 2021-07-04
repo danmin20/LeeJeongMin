@@ -40,6 +40,11 @@ export const skills = [
 
 export const careers = [
   {
+    title: "우아한형제들",
+    date: "2021.07.05 ~ 2021.08.31",
+    about: "교육형 인턴 우아한테크캠프 4기",
+  },
+  {
     title: "Naver",
     date: "2021.03.02 ~ 2021.04.09",
     about: "Glace CIC / 스마트플레이스서비스 FE 개발 인턴",
@@ -81,11 +86,6 @@ export const activities = [
     title: "AUSG",
     date: "4기 (2020.09 ~ )",
     about: "AWSKRUG 소속 AWS 대학생 동아리",
-  },
-  {
-    title: "우아한테크캠프",
-    date: "4기 (2021.07 ~  2021.08)",
-    about: "우아한형제들에서 주최한 교육 프로그램",
   },
 ];
 
